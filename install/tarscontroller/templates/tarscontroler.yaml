@@ -110,7 +110,6 @@ spec:
       containers:
         - image:
             {{ .Values.helm.dockerhub.registry }}/tarscontroller:{{ .Values.helm.build.id}}
-          imagePullPolicy: Always
           name: tars-controller
       enableServiceLinks: false
       restartPolicy: Always
