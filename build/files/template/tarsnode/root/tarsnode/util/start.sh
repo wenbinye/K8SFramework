@@ -124,7 +124,6 @@ case ${ServerType} in
   fi
   export ServerLauncherArgv="php ${ServerBinDir}/src/index.php --config=${ServerConfFile} "
   ;;
-  ;;
 esac
 
 exec ${_IMAGE_BIND_TARSNODE_EXECUTION_FILE_} --config=${_IMAGE_BIND_TARSNODE_CONF_FILE_}
