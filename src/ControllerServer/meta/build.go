@@ -139,7 +139,6 @@ func buildPodInitContainers(tserver *crdV1beta1.TServer) []k8sCoreV1.Container {
 				},
 			},
 			Image:           image,
-			ImagePullPolicy: k8sCoreV1.PullAlways,
 		},
 	}
 }
@@ -360,7 +359,6 @@ func buildPodTemplate(tserver *crdV1beta1.TServer) k8sCoreV1.PodTemplateSpec {
 					Env:             tserver.Spec.K8S.Env,
 					EnvFrom:         tserver.Spec.K8S.EnvFrom,
 					Image:           serverImage,
-					ImagePullPolicy: k8sCoreV1.PullAlways,
 					Name:            tserver.Name,
 					Ports:           buildContainerPorts(tserver),
 					VolumeMounts:    buildContainerVolumeMounts(tserver),

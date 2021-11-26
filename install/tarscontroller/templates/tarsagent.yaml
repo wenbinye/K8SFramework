@@ -86,7 +86,6 @@ spec:
       containers:
         - image:
             {{.Values.helm.dockerhub.registry }}/tarsagent:{{.Values.helm.build.id}}
-          imagePullPolicy: "Always"
           name: tars-agent
           #command: ["/bin/bash"]
           #args: ["-c", "while true; do sleep 10;done"]
